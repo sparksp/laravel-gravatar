@@ -1,21 +1,15 @@
-# Gravatar for Laravel
+# Gravitas Bundle, by Phill Sparks
 
-A simple bundle to provide [Gravatar](http://gravatar.com/) functions in Laravel.
+A Laravel [Gravatar](http://gravatar.com/) bundle, installable via the Artisan CLI:
 
-## Installation
+    php artisan bundle:install gravitas
 
-Drop the **gravatar** bundle into your **/bundles** directory and add gravatar to **/bundles/bundles.php**.
+Get a Gravatar URL
 
-## Configuration
+    Gravitas\API::url('me@phills.me.uk', 120);
 
-Default size, rating and default image can be configured in **config/default.php**.  Full documentation is included in the config file.
+Get the HTML for a Gravatar image
 
-## Usage
+    Gravitas\API::image('me@phills.me.uk', null, 'Phill Sparks');
 
-### Get a Gravatar URL
-
-    Gravatar\Gravatar::url('me@phills.me.uk', 120);
-
-### Get the HTML for a Gravatar image
-
-    Gravatar\Gravatar::image('me@phills.me.uk', null, 'Phill Sparks');
+You can configure the size, rating and default image in **config/default.php**.  Full documentation is included in the config file.
